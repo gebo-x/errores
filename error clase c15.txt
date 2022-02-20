@@ -11,7 +11,7 @@ var score=0;
 
 var gameState=play;
 var play=1;
-var end=0
+var end=0  // falta punto y coma! 
 var obstaclesGroup;
 
 function preload(){
@@ -49,7 +49,7 @@ function setup() {
   
   console.log("Hola" + 5);
   
- // obstaclesGroup=createSprite();
+  obstaclesGroup=createSprite(); // aqui es createGroup(); Y CREAR EL GRUPO DE NUBES 
 }
 
 function draw() {
@@ -57,7 +57,7 @@ function draw() {
   text("puntuacion"+score,500,50)
  
   if(gameState===play) {
-    ground.velocityX=-4
+    ground.velocityX=-4 // FALTA PUNTO Y COMA 
     if(keyDown("space")&& trex.y >= 100) {
       trex.velocityY = -13;
     }
@@ -119,7 +119,7 @@ function spawnObstacles(){
     //asignar escala y lifetime al obstáculo           
     obstacle.scale = 0.3;
     obstacle.lifetime = 300;
-    obstacleGroup.add(obstacle);
+    obstacleGroup.add(obstacle); // OBSTACLES ES CON S 
  }
 }
 
@@ -141,6 +141,7 @@ function spawnClouds() {
     //ajustar la profundidad
     cloud.depth = trex.depth;
     trex.depth = trex.depth + 1;
+    // FALTA CREAR CLOUDS GROUP. ADD
   }
   
 }
